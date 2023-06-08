@@ -1,0 +1,10 @@
+<h1>Tus contactos:</h1>
+
+<!-- Listar los contactos y poder navegar al detalle del contacto al clickear uno de ellos -->
+
+<div *ngFor="let contacto of listaContactos; let i = index">
+  <!-- En este caso, routerLink añade el parametro pasado como subruta, ya que la ruta /contacts ya existe y esta declarada por encima de la ruta contacts/:id -->
+  <div routerLink="{{ contacto.id }}">
+    <h6>Nombre: {{ contacto.nombre }}</h6>
+  </div>
+</div>
